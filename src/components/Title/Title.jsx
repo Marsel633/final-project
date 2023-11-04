@@ -1,10 +1,13 @@
-import React from 'react'
-import styles from "./Title.module.scss"
+import React from 'react';
+import styles from './Title.module.scss';
 
-const Title = ({text, padding}) => {
-  return (
-    <h3 style={{paddingBottom: {padding}}} className={styles.title}>{text}</h3>
-  )
-}
+const Title = ({ text, padding, color }) => {
+  const titleStyle = {
+    paddingBottom: padding,
+    color: color,
+  };
 
-export default Title
+  return <h3 style={titleStyle} className={styles.title}>{text}</h3>;
+};
+
+export default Title;
