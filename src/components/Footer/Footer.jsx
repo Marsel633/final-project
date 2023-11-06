@@ -1,26 +1,46 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import Logo from "../../assets/mainlogo_svg.svg";
+import { SiYourtraveldottv } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { socialIcons } from "../../assets/arrays";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__logo}>
-        <div className={styles.logo__icon}>
-          <Link to="/">TravelGo</Link>
-          <img src={Logo} alt="Logo icon" />
+      <div className={styles.footer__wrapper}>
+        <div className={styles.footer__about}>
+          <div className={styles.footer__logo}>
+            <Link to="/">TravelGo</Link>
+            <SiYourtraveldottv color="#fff" size={30} />
+          </div>
+          <p className={styles.logo__info}>
+            Book your trip in minute, get full Control for much longer.
+          </p>
+          <p>
+            Travel expands one's worldview and takes a person out of his comfort
+            zone. The choice is always yours, to live or to exist
+          </p>
         </div>
-        <p className={styles.logo__info}>Book your trip in minute, get full Control for much longer.</p>
+        <nav className={styles.footer__navbar}>
+          <Link to="/services">Services</Link>
+          <Link to="/contacts">Contacts</Link>
+          <Link to="/more">More</Link>
+        </nav>
+        <div className={styles.footer__social}>
+          {socialIcons.map((item) => (
+            <button
+            onClick={() => {
+              console.log(item);
+            }}
+            key={item.id}
+            className={`${styles[item.name]} ${styles.button}`}
+          >
+            {item.icon}
+          </button>
+          ))}
+        </div>
       </div>
-      <nav className={styles.footer__navbar}>
-        <div className={styles.navbar__company}>comp</div>
-        <div className={styles.navbar__contacts}>cont</div>
-        <div className={styles.navbar__more}>more</div>
-      </nav>
-      <div className={styles.footer__social}>
-        social
-      </div>
+      <p className={styles.footer__copyright}>Copyright © 2023 TravelGo <span>Powered By Akparov Marsel</span></p>
     </footer>
   );
 };

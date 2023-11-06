@@ -1,6 +1,5 @@
 import React from "react";
-import { Layout } from "../../shared";
-import styles from "./Home.module.scss";
+import { Button, Layout } from "../../shared";
 import { Title } from "../../components";
 import {
   bookingStepsArray,
@@ -8,22 +7,73 @@ import {
   chooseCardIconArray,
   locationsArray,
   statisticArray,
+  carouselImages
 } from "../../assets/arrays";
 import { AiOutlineArrowRight, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { TfiLocationPin } from "react-icons/tfi";
+import { Progress, Statistic } from "antd";
+import { Carousel } from "antd";
+import CountUp from "react-countup";
 import ItalyImg from "../../assets/italy.jpg";
-import { Progress } from "antd";
 import seoulImg from "../../assets/seoul.jpg";
-import worldMap from "../../assets/world_map.png"
-import {TfiLocationPin} from "react-icons/tfi"
+import worldMap from "../../assets/world_map.png";
+import styled from "styled-components";
+import styles from "./Home.module.scss";
+
+const CarouselWrapper = styled(Carousel)`
+  > .slick-dots li button {
+    opacity: 1;
+    width: 5px;
+  }
+  > .slick-dots li.slick-active button {
+    background: #000000;
+  }
+  > .slick-track {
+    height: auto;
+  }
+`;
+
+const CarouselFunc = () => {
+  return (
+    <CarouselWrapper dotPosition="left">
+      {carouselImages.map((item) => (
+        <div className={styles.carousel}>
+          <div className={styles.carousel__image}>
+            <img key={item.id} src={item.image} alt={item.name} />
+          </div>
+          <div className={styles.feedback__item}>
+            <div>
+              <img src={item.image} alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus facilis inventore consequatur recusandae voluptates.
+              Voluptate fugit incidunt nemo similique. Suscipit, ipsum fugit aut
+              impedit voluptate sequi illo illum aspernatur dignissimos numquam
+              optio voluptas, molestias quibusdam ex hic? Itaque veniam ratione
+              tempore doloribus earum quas placeat, perferendis deleniti ipsum
+              sint culpa.
+            </p>
+            <span>— John Doe</span>
+          </div>
+        </div>
+      ))}
+    </CarouselWrapper>
+  );
+};
 
 const Home = () => {
+  const formatter = (value) => <CountUp end={value} separator="," />;
   return (
     <Layout>
-      <section className={`${styles.background} ${styles.home}`}>
+      <section className={`background ${styles.home}`}>
         <h1>
           Your Imagination Is <br /> Your Only Limit
         </h1>
+        <button className={styles.home__button}>
+         Discover more
+        </button>
       </section>
       <section className={`section container ${styles.ourServiece}`}>
         <Title text="Our Service" padding={63} color="#000" />
@@ -37,7 +87,7 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className={`section ${styles.background} ${styles.statistic}`}>
+      <section className={`section background ${styles.statistic}`}>
         <div className={`container ${styles.statisticWrapper}`}>
           <Title
             text="We always try to give you the best service"
@@ -52,7 +102,13 @@ const Home = () => {
             {statisticArray.map((item) => (
               <div key={item.id} className={styles.cards__item}>
                 {item.icon}
-                <p className={styles.item__title}>{item.title}</p>
+                <div className={styles.item__title}>
+                  <Statistic
+                    value={`${item.title.number}`}
+                    formatter={formatter}
+                  />
+                  <span>{item.title.string}</span>
+                </div>
                 <p>{item.desc}</p>
               </div>
             ))}
@@ -64,9 +120,13 @@ const Home = () => {
         <div className={styles.destionations__content}>
           <div className={styles.destionations__map}>
             <img src={worldMap} alt="world map" />
-           {[1,2,3].map((id) => (
-            <TfiLocationPin className={`${styles[`item-${id}`]} ${styles.map__items}`} key={id} size={23}/>
-           ))}
+            {[1, 2, 3].map((id) => (
+              <TfiLocationPin
+                className={`${styles[`item-${id}`]} ${styles.map__items}`}
+                key={id}
+                size={23}
+              />
+            ))}
           </div>
           <div className={styles.destionations__locations}>
             {locationsArray.map((item) => (
@@ -82,7 +142,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className={`section ${styles.background} ${styles.booking}`}>
+      <section className={`section background ${styles.booking}`}>
         <div className={`container ${styles.bookingWrapper}`}>
           <Title text="Book Your Next Trip in 3 Easy Steps" color="#fff" />
           <p className="titleDesc">Easy and Fast</p>
@@ -148,6 +208,12 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className={`section container ${styles.feedbacks}`}>
+        <Title text="What People Say About Us" padding={60} />
+        <div className={styles.feedbacks__carousel}>
+          <CarouselFunc />
         </div>
       </section>
     </Layout>

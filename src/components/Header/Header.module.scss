@@ -13,13 +13,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    a {
+      margin-right: 8px;
+    }
   }
 
   .header__navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 40%;
+    width: 60%;
   }
 
   .header__login {
@@ -29,6 +32,5 @@
 
   a {
   color: #fff;
-
   }
 }

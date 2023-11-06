@@ -1,6 +1,150 @@
 .footer {
+    background-color: #011627;
+    color: #fff;
+    padding: 5% 0 2%;
+  a {
+    color: #fff;
+  }
+  .footer__wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10% 0;
+    .footer__about {
+      width: 40%;
+      .footer__logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      p {
+        margin: 30px 0;
+      }
+    }
+
+    .footer__navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer__social {
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: fit-content;
+      width: fit-content;
+      transition: 0.3s;
+      border-radius: 50%;
+
+      &:hover {
+        padding: 60px;
+      }
+
+      &:hover .button {
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+      .mainButton {
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        border: none;
+        background: #e8e8e8;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+        border-radius: 50%;
+        transition: 0.2s;
+        z-index: 100;
+      }
+
+      .button {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        border: none;
+        background: #e8e8e8;
+        box-shadow: 5px 5px 12px rgba(202, 202, 202, 0),
+          -5px -5px 12px rgba(255, 255, 255, 0);
+        transition: 0.3s;
+        border-radius: 50%;
+      }
+
+      .discordButton {
+        transition-delay: 0.1s, 0, 0.1s;
+        transition-property: translate, background-color, box-shadow;
+        &:hover {
+          background: #5865f2;
+        }
+      }
+
+      &:hover .discordButton {
+        translate: 70px 0px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .twitterButton:hover {
+        background: #1ca1f1;
+      }
+      &:hover .twitterButton {
+        translate: 47px -47px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .redditButton:hover {
+        background: #ff4500;
+      }
+
+      &:hover .redditButton {
+        translate: 0px -70px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .messengerButton:hover {
+        background: #0093ff;
+      }
+      &:hover .messengerButton {
+        translate: -47px -47px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .pinterestButton:hover {
+        background: #f0002a;
+      }
+      &:hover .pinterestButton {
+        translate: -70px 0px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .instagramButton:hover {
+        background: #f914af;
+      }
+      &:hover .instagramButton {
+        translate: -47px 47px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .snapchatButton:hover {
+        background: #fffc00;
+      }
+      &:hover .snapchatButton {
+        translate: 0px 70px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+
+      .whatsappButton:hover {
+        background: #25d366;
+      }
+      &:hover .whatsappButton {
+        translate: 47px 47px;
+        box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+      }
+    }
+  }
+
+  .footer__copyright {
+    display: flex;
+    margin: 20px auto 0;
+    width: 85%;
+    justify-content: space-between;
+  }
 }
