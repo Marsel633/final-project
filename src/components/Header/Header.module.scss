@@ -10,11 +10,11 @@
   transform: translate(-50%);
 
   .header__logo {
-    display: flex;
+    margin-right: 10%;
+    a {
+      display: flex;
     justify-content: center;
     align-items: center;
-    a {
-      margin-right: 8px;
     }
   }
 
@@ -31,6 +31,43 @@
   }
 
   a {
-  color: #fff;
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+  
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: transparent; 
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+  
+    &:before {
+      top: -10px;
+      transform-origin: right;
+    }
+  
+    &:after {
+      bottom: -10px;
+      transform-origin: left;
+    }
+  
+    &:hover {
+      color: #06D6A0;
+      svg {
+        fill: #06D6A0;
+      }
+      &:before,
+      &:after {
+        transform: scaleX(1);
+        background-color: #06D6A0;
+      }
+    }
   }
+  
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Layout } from "../../shared";
+import { Layout } from "../../shared";
 import { Title } from "../../components";
 import {
   bookingStepsArray,
@@ -71,9 +71,6 @@ const Home = () => {
         <h1>
           Your Imagination Is <br /> Your Only Limit
         </h1>
-        <button className={styles.home__button}>
-         Discover more
-        </button>
       </section>
       <section className={`section container ${styles.ourServiece}`}>
         <Title text="Our Service" padding={63} color="#000" />

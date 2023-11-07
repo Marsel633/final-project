@@ -10,8 +10,7 @@ const Footer = () => {
       <div className={styles.footer__wrapper}>
         <div className={styles.footer__about}>
           <div className={styles.footer__logo}>
-            <Link to="/">TravelGo</Link>
-            <SiYourtraveldottv color="#fff" size={30} />
+            <Link to="/">TravelGo   <SiYourtraveldottv color="#fff" size={30} /></Link>
           </div>
           <p className={styles.logo__info}>
             Book your trip in minute, get full Control for much longer.

@@ -1,9 +1,45 @@
 .footer {
-    background-color: #011627;
-    color: #fff;
-    padding: 5% 0 2%;
+  background-color: #011627;
+  color: #fff;
+  padding: 5% 0 2%;
   a {
+    text-decoration: none;
+    position: relative;
     color: #fff;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: transparent;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    &:before {
+      top: -10px;
+      transform-origin: right;
+    }
+
+    &:after {
+      bottom: -10px;
+      transform-origin: left;
+    }
+
+    &:hover {
+      color: #06d6a0;
+      svg {
+        fill: #06d6a0;
+      }
+      &:before,
+      &:after {
+        transform: scaleX(1);
+        background-color: #06d6a0;
+      }
+    }
   }
   .footer__wrapper {
     display: flex;
@@ -12,9 +48,12 @@
     .footer__about {
       width: 40%;
       .footer__logo {
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        width: fit-content;
+        a {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+        }
       }
       p {
         margin: 30px 0;
@@ -22,9 +61,9 @@
     }
 
     .footer__navbar {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     .footer__social {
@@ -144,7 +183,7 @@
   .footer__copyright {
     display: flex;
     margin: 20px auto 0;
-    width: 85%;
+    width: 80%;
     justify-content: space-between;
   }
 }

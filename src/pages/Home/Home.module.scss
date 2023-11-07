@@ -2,14 +2,13 @@
   background-image: url(../../assets/elephant.jpeg);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   h1 {
     font-size: 70px;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 200px;
   }
   
   .home__button {
@@ -140,7 +139,7 @@
         padding: 0 40px;
         &:hover svg {
           animation: motionArrow 1.5s infinite;
-          color: #4992ff;
+          color: #06D6A0;
         }
         svg {
           font-size: 30px;
