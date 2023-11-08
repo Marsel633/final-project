@@ -1,72 +1,74 @@
-.login {
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  position: relative;
-  z-index: 0;
-  background-color: #011627;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+.login__signup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  a {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #06d6a0;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    &::before {
+      bottom: 0px;
+      transform-origin: center;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
 
-  .login__form {
-    width: 60%;
-    height: 80%;
-    border-radius: 5%;
-    display: grid;
-    place-items: center;
-    border-radius: 50px;
-    border: 3px solid rgba(244, 244, 244, 0.6);
-    background: linear-gradient(
-      145deg,
-      rgba(244, 244, 244, 0.4) -4.23%,
-      rgba(244, 244, 244, 0.2) 102.58%
-    );
-    backdrop-filter: blur(10px);
-    color: #ffffff;
+  .login__p {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 
-    .form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 25px;
-
-      .inputBox {
-        position: relative;
-        width: 300px;
-        .eye {
-          position: absolute;
-          top: 0;
-          right: 40px;
-          padding-left: 8px;
-
-          svg {
-            border: none;
-          }
-        }
-      }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 27%;
+      height: 1px;
+      background-color: #fff;
     }
 
-    a {
-      position: relative;
-      overflow: hidden;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #06d6a0;
-        transform: scaleX(0);
-        transition: transform 0.3s;
+    &:before {
+      top: 50%;
+      left: 0;
+    }
+
+    &:after {
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  .login__socials {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    button {
+      background-color: transparent;
+      transition: .3s all;
+      &:hover svg {
+        fill: #06d6a0;
+        transform: scale(1.3);
       }
-      &::before {
-        bottom: 0px;
-        transform-origin: center;
-      }
-      &:hover::before {
-        transform: scaleX(1);
-      }
+    }
+    svg {
+      font-size: 30px;
+      transition: .3s;
+      fill: #223243;
     }
   }
 }

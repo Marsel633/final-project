@@ -68,7 +68,7 @@ const Home = () => {
   return (
     <Layout>
       <section className={`background ${styles.home}`}>
-        <h1>
+        <h1 className="sectionTitle">
           Your Imagination Is <br /> Your Only Limit
         </h1>
       </section>

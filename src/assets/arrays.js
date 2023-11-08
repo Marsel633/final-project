@@ -4,6 +4,13 @@ import NewZelandImage from "../assets/newZeland.jpg";
 import Canyons from "../assets/canyons.jpg";
 import Shizuoka from "../assets/shizuoka.jpg";
 import Dubai from "../assets/dubai.jpg";
+import {
+  AiFillApple,
+  AiOutlineTwitter,
+  AiFillInstagram,
+  AiFillFacebook,
+  AiFillGoogleCircle,
+} from "react-icons/ai";
 
 export const cardsArray = [
   {
@@ -519,5 +526,55 @@ export const socialIcons = [
       </svg>
     ),
     transitionDelay: "0.7s, 0s, 0.7s",
+  },
+];
+
+export const continueWithIcons = [
+  <AiFillApple />,
+  <AiFillGoogleCircle />,
+  <AiOutlineTwitter />,
+  <AiFillInstagram />,
+  <AiFillFacebook />,
+];
+
+export const aboutDescriptionArray = [
+  "Since 1995, our travel company has been crafting joyous journeys, turning dreams into destinations. We've been weaving memories, one adventure at a time, making hearts wander and souls rediscover the world's wonders.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi id corporis sit suscipit fuga quo laboriosam architecto voluptates ut? Asperiores molestias, perferendis, rem dolorum odio ipsa sit iusto facilis beatae doloribus cum laborum error quasi, est voluptatem earum quaerat assumenda eveniet! Aliquid ratione alias repellat labore amet rerum debitis ad.",
+  "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, officiis provident, nihil magnam cupiditate excepturi impedit sint totam quia distinctio ipsa facere blanditiis tempora vero optio dolores, magni earum. Repudiandae!",
+];
+
+export const aboutStatisticArray = [
+  {
+    title: "Satisfied Clients",
+    num: "15733",
+  },
+  {
+    title: "Years of Experience",
+    num: "15",
+  },
+  {
+    title: "Places Visited",
+    num: "657",
+  },
+];
+
+export const statisticItemsArray = [
+  {
+    title: "We Love Nature",
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non aspernatur sit facilis at, nihil totam velit illum nisi, vero, perspiciatis dolorum atque aliquid eum nemo iure qui reprehenderit. Explicabo earum placeat numquam beatae ab, praesentium autem repellendus quo cum.",
+  },
+  {
+    title: "It Is a Gift",
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non aspernatur sit facilis at, nihil totam velit illum nisi, vero, perspiciatis dolorum atque aliquid eum nemo iure qui reprehenderit. Explicabo earum placeat numquam beatae ab, praesentium autem repellendus quo cum.",
+  },
+  {
+    title: "Traveling Is Awesome",
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non aspernatur sit facilis at, nihil totam velit illum nisi, vero, perspiciatis dolorum atque aliquid eum nemo iure qui reprehenderit. Explicabo earum placeat numquam beatae ab, praesentium autem repellendus quo cum.",
   },
 ];

@@ -3,9 +3,9 @@
   color: #fff;
   padding: 5% 0 2%;
   a {
-    text-decoration: none;
     position: relative;
     color: #fff;
+    padding: 10px 0;
 
     &:before,
     &:after {
@@ -20,12 +20,12 @@
     }
 
     &:before {
-      top: -10px;
+      top: 0;
       transform-origin: right;
     }
 
     &:after {
-      bottom: -10px;
+      bottom: 0;
       transform-origin: left;
     }
 

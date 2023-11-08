@@ -23,7 +23,7 @@ const {goTo} = useNav();
           <Button onClick={()=>{goTo("/login")}} type="button">
             Login
           </Button>
-          <Button type="button">
+          <Button onClick={() => goTo("/signup")} type="button">
             Sign Up
           </Button>
         </div>
