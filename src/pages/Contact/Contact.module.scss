@@ -1,0 +1,94 @@
+.contact__bg {
+  background-image: url(../../assets//contactsBg.jpg);
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}
+
+.contact {
+  display: flex;
+  gap: 5%;
+  .contact__info {
+    h3,
+    h5 {
+      text-align: left;
+    }
+    p {
+      width: 60%;
+      margin: 20px 0;
+    }
+    .info__links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 20px;
+      a {
+        color: #d94948;
+        width: fit-content;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    .contact__social {
+      h5 {
+        margin-bottom: 20px;
+      }
+      div {
+        display: inline-grid;
+        place-items: center;
+        font-size: 30px;
+        background-color: #d94948; 
+        margin: 0 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: .4s;
+
+        svg {
+          color: #fff;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .contact__form {
+    width: 50%;
+    .form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      div {
+        display: flex;
+        flex-direction: column;
+        input, textarea {
+          margin: 10px 0;
+        }
+        textarea {
+          resize: none;
+          height: 100px;
+        }
+      }
+      button {
+        padding: 10px 30px;
+       width: 150px;
+       background-color: #d94948;
+       border: 1px solid #fff;
+       text-transform: uppercase;
+       letter-spacing: 3px;
+       border-radius: 15px;
+       color: #fff;
+       transition: .4s;
+       &:hover {
+        background-color: #fff;
+        border: 1px solid #d94948;
+        color: #d94948;
+       }
+      }
+    }
+  }
+}

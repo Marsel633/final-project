@@ -1,7 +1,7 @@
 import axios from "axios";
 import { makeAutoObservable } from "mobx";
 
-class CounterStore {
+class UserStore {
   user = {
     isPending: false,
     error: null,
@@ -16,12 +16,12 @@ class CounterStore {
     try {
       this.user.isPending = true;
       const { data } = await axios.post(
-        `${process.env.REACT_APP_MAIN_URL}/signup`,
+        `${process.env.REACT_APP_MAIN_URL}/users`,
         newUser
       );
-      localStorage.getItem("token", data.accessToken);
+      localStorage.setItem("token", data.accessToken);
       this.user.data = data;
-      return this.data.user;
+      return data;
     } catch (error) {
       this.user.error = error;
     } finally {
@@ -30,4 +30,4 @@ class CounterStore {
   };
 }
 
-export const counterStore = new CounterStore();
+export const userStore = new UserStore();

@@ -21,7 +21,7 @@ const Login = () => {
       />
       <Input type="password" title="Password" icon={AiFillLock} />
       <div className={styles.login__signup}>
-        <p>Not Registered? <a
+        <p>Not Registered? <a className={styles.link}
           onClick={() => {
             goTo("/signup");
           }}

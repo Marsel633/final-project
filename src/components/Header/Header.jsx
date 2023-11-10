@@ -11,13 +11,13 @@ const {goTo} = useNav();
   return (
     <header className={`container ${styles.header}`}>
         <div className={styles.header__logo}>
-          <Link to="/">TravelGo<SiYourtraveldottv color="#fff" size={30}/></Link>
+          <Link className={styles.link} to="/">TravelGo<SiYourtraveldottv color="#fff" size={30}/></Link>
         </div>
         <div className={styles.header__navbar}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contacts">Contacts</Link>
+          <Link className={styles.link} to="/">Home</Link>
+          <Link className={styles.link} to="/about">About</Link>
+          <Link className={styles.link} to="/services">Services</Link>
+          <Link className={styles.link} to="/contact">Contact</Link>
         </div>
         <div className={styles.header__login}>
           <Button onClick={()=>{goTo("/login")}} type="button">

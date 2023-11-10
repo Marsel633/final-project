@@ -20,6 +20,7 @@
   }
   .history {
     p {
+      font-weight: 300;
       margin-bottom: 6%;
     }
   }
@@ -38,9 +39,8 @@
         font-weight: 600;
         font-size: 18px;
       }
-      p {
-        font-weight: 700;
-        font-size: 2.5rem;
+      h3 {
+        text-align: left;
       }
     }
     .statistic__info {

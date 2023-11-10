@@ -9,6 +9,7 @@ import {
 } from "../../assets/arrays";
 import { Statistic } from "antd";
 import CountUp from "react-countup";
+import { Title } from "../../components";
 
 const About = () => {
   const formatter = (value) => <CountUp end={value} separator="," />;
@@ -21,7 +22,7 @@ const About = () => {
         <div className={styles.about__slogan}>
           <span>TravelGo</span>
           <p>
-            One Touch Of Nature Makes <br /> The Whole World Kin
+            One Touch Of Nature Makes <br /> The Whole World Kind
           </p>
           <div className={styles.about__gif}>
             <img src={travelGif} alt="" />
@@ -37,7 +38,9 @@ const About = () => {
         <div className={styles.statistic}>
           <div className={styles.statistic__title}>
             <span>Some Cool Facts</span>
-            <p>Numbers Speak For Themselves</p>
+            <Title
+            text="Numbers Speak For Themselves"
+            />
           </div>
           <div className={styles.statistic__info}>
             {aboutStatisticArray.map((item) => (

@@ -35,4 +35,40 @@
   z-index: -2;
 }
 
+.input {
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  position: relative;
+}
+.input::before,
+.input::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transition: transform .4s;
+}
+
+.input::before {
+  transform-origin: left;
+  bottom: 0;
+}
+.input::after {
+  transform-origin: right;
+  top: 0;
+}
+
+.input:focus {
+  border-bottom: none;
+}
+.input:focus .input::before,
+.input:focus .input::after{
+  transform: scaleX(1);
+  background-color: #06D6A0;
+}
 

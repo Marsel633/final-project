@@ -10,6 +10,7 @@ import {
   AiFillInstagram,
   AiFillFacebook,
   AiFillGoogleCircle,
+  AiFillYoutube,
 } from "react-icons/ai";
 
 export const cardsArray = [
@@ -578,3 +579,36 @@ export const statisticItemsArray = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non aspernatur sit facilis at, nihil totam velit illum nisi, vero, perspiciatis dolorum atque aliquid eum nemo iure qui reprehenderit. Explicabo earum placeat numquam beatae ab, praesentium autem repellendus quo cum.",
   },
 ];
+
+export const servicesText = [
+  " This project was created by Akparov Marsel' Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo vel vero nobisperspiciatis quasi voluptates blanditiis animi. Ducimus at temporadoloribus reprehenderit repellat facilis provident dolores.Cupiditate, laudantium facilis.",
+  " This project was created by Akparov Marsel' Lorem ipsum dolor sitamet consectetur adipisicing elit. Fuga explicabo vel vero nobisperspiciatis quasi voluptates blanditiis animi. Ducimus at temporadoloribus reprehenderit repellat facilis provident dolores.Cupiditate, laudantium facilis.",
+  " This project was created by Akparov Marsel' Lorem ipsum dolor sitamet consectetur adipisicing elit. Fuga explicabo vel vero nobisperspiciatis quasi voluptates blanditiis animi. Ducimus at temporadoloribus reprehenderit repellat facilis provident dolores.Cupiditate, laudantium facilis.",
+];
+
+export const infoItemsArray = [
+  {
+    title: "Autumn Is a Second Spring",
+    desc: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+  },
+  {
+    title: "Study Nature, Love Nature",
+    desc: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+  },
+  {
+    title: "Look Deep Into Nature",
+    desc: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+  },
+  {
+    title: "Just Let It Rain",
+    desc: "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+  },
+];
+
+
+export const contactIconsArray = [
+  <AiFillFacebook/>,
+  <AiFillInstagram/>,
+  <AiOutlineTwitter/>,
+  <AiFillYoutube/>
+]

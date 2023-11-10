@@ -31,3 +31,7 @@ button {
   outline: none;
   border: none;
 }
+
+svg {
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.footer__wrapper}>
         <div className={styles.footer__about}>
           <div className={styles.footer__logo}>
-            <Link to="/">TravelGo   <SiYourtraveldottv color="#fff" size={30} /></Link>
+            <Link className={styles.link} to="/">TravelGo   <SiYourtraveldottv color="#fff" size={30} /></Link>
           </div>
           <p className={styles.logo__info}>
             Book your trip in minute, get full Control for much longer.
@@ -21,9 +21,9 @@ const Footer = () => {
           </p>
         </div>
         <nav className={styles.footer__navbar}>
-          <Link to="/services">Services</Link>
-          <Link to="/contacts">Contacts</Link>
-          <Link to="/more">More</Link>
+          <Link className={styles.link} to="/services">Services</Link>
+          <Link className={styles.link} to="/contacts">Contacts</Link>
+          <Link className={styles.link} to="/more">More</Link>
         </nav>
         <div className={styles.footer__social}>
           {socialIcons.map((item) => (
