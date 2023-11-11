@@ -31,10 +31,10 @@ const ProfileLayout = ({ children }) => {
     console.log(userData.data)
   },[])
 
-  // const logOut = () => {
-  //   localStorage.removeItem("token");
-  //   navigate("/signup");
-  // }
+  const logOut = () => {
+    localStorage.removeItem("token");
+    navigate("/signup");
+  }
   
   const items = [
     {
@@ -88,7 +88,7 @@ const ProfileLayout = ({ children }) => {
               <span>Settings</span>
             </Button2>
             <Button2 
-            // onClick={() => logOut()}
+            onClick={() => logOut()}
             >
             <AiOutlinePoweroff/>
               <span>Logout</span>

@@ -1,10 +1,10 @@
 .dashboard {
   display: grid;
   grid-template-columns: auto 2fr auto;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // margin-top: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   .sidebar {
     transition: 0.5s;
     position: relative;
@@ -137,6 +137,7 @@
       border-radius: 35px;
       background: rgba(25, 194, 139, 0.05);
       margin: 20px;
+      height: 80vh;
       overflow-y: scroll;
     }
   }

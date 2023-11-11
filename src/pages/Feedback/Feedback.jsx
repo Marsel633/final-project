@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Feedback.module.scss";
-import { ProfileLayout, Title } from "../../components";
+import { Loader, ProfileLayout, Title } from "../../components";
 import { useForm } from "react-hook-form";
 import { addFeedbackStore } from "../../store";
+
 
 const Feedback = () => {
   const { register, reset, handleSubmit } = useForm();
@@ -11,6 +12,10 @@ const Feedback = () => {
     addFeedback(values);
     reset();
   };
+
+  if(feedbacks.isPending){
+    return <Loader/>
+  }
 
   return (
     <ProfileLayout>

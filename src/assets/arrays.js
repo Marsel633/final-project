@@ -651,3 +651,18 @@ export const profileItemsArray = [
     icon: <FaPeoplePulling/>,
   },
 ]
+
+export const USALocations = [
+  {
+    image: "https://images.pexels.com/photos/12564071/pexels-photo-12564071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "New York",
+  },
+  {
+    image: "https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "California",
+  },
+  {
+    image: "https://images.pexels.com/photos/2540653/pexels-photo-2540653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Las Vegas",
+  },
+]

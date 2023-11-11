@@ -1,3 +1,3 @@
 export * from "./PackagesStore/PackagesStore"
 export * from "./UsersStore/UsersStore"
-export * from "./Feedbacks/Feedbacks"
+export * from "./Feedback/Feedbacks"

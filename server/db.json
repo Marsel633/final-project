@@ -14,6 +14,18 @@
         "0": {}
       },
       "id": 2
+    },
+    {
+      "email": "aidar@mail.ru",
+      "password": "$2a$10$CzMeHOYVYUuBieCkVteNAedhIq4OeEqeZsIES16gGq8oxhkUHESdO",
+      "name": "aidar",
+      "id": 3
+    },
+    {
+      "email": "akyl@mail.ru",
+      "password": "$2a$10$1.x.gPmWdvnvUE3mmK.zSemHtekJol4lukeE18Zo9yjw8h.bLgZEW",
+      "name": "akyl",
+      "id": 4
     }
   ],
   "packages": [

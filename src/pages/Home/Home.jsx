@@ -1,19 +1,26 @@
 import React from "react";
 import { Layout } from "../../shared";
-import { Title } from "../../components";
+import {
+  Title,
+  bottomAnimation,
+  leftAnimation,
+  rigthAnimation,
+  topAnimation,
+} from "../../components";
 import {
   bookingStepsArray,
   cardsArray,
   chooseCardIconArray,
   locationsArray,
   statisticArray,
-  carouselImages
+  carouselImages,
 } from "../../assets/arrays";
 import { AiOutlineArrowRight, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { TfiLocationPin } from "react-icons/tfi";
 import { Progress, Statistic } from "antd";
 import { Carousel } from "antd";
+import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import ItalyImg from "../../assets/italy.jpg";
 import seoulImg from "../../assets/seoul.jpg";
@@ -65,6 +72,7 @@ const CarouselFunc = () => {
 
 const Home = () => {
   const formatter = (value) => <CountUp end={value} separator="," />;
+
   return (
     <Layout>
       <section className={`background ${styles.home}`}>
@@ -74,15 +82,23 @@ const Home = () => {
       </section>
       <section className={`section container ${styles.ourServiece}`}>
         <Title text="Our Service" padding={63} color="#000" />
-        <div className={styles.ourService__cards}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          className={styles.ourService__cards}
+        >
           {cardsArray.map((item) => (
-            <div key={item.id} className={styles.cards__item}>
+            <motion.div
+              variants={topAnimation}
+              key={item.id}
+              className={styles.cards__item}
+            >
               {item.icon}
               <h5>{item.title}</h5>
               <p>{item.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
       <section className={`section background ${styles.statistic}`}>
         <div className={`container ${styles.statisticWrapper}`}>
@@ -95,9 +111,17 @@ const Home = () => {
             We always try to make our customer Happy. We provide all kind of{" "}
             <br /> facilities. Your Satisfaction is our main priority.
           </p>
-          <div className={styles.statistic__cards}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            className={styles.statistic__cards}
+          >
             {statisticArray.map((item) => (
-              <div key={item.id} className={styles.cards__item}>
+              <motion.div
+                variants={bottomAnimation}
+                key={item.id}
+                className={styles.cards__item}
+              >
                 {item.icon}
                 <div className={styles.item__title}>
                   <Statistic
@@ -107,9 +131,9 @@ const Home = () => {
                   <span>{item.title.string}</span>
                 </div>
                 <p>{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className={`section container ${styles.distinations}`}>
@@ -125,18 +149,26 @@ const Home = () => {
               />
             ))}
           </div>
-          <div className={styles.destionations__locations}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            className={styles.destionations__locations}
+          >
             {locationsArray.map((item) => (
-              <div key={item.id} className={styles.locations__item}>
+              <motion.div
+                variants={rigthAnimation}
+                key={item.id}
+                className={styles.locations__item}
+              >
                 <div>
                   <img src={item.image} alt={item.title} />
                 </div>
                 <h5>{item.title}</h5>
                 <p>{item.desc}</p>
                 <AiOutlineArrowRight />
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className={`section background ${styles.booking}`}>
@@ -144,9 +176,17 @@ const Home = () => {
           <Title text="Book Your Next Trip in 3 Easy Steps" color="#fff" />
           <p className="titleDesc">Easy and Fast</p>
           <div className={styles.booking__content}>
-            <div className={styles.booking__steps}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              className={styles.booking__steps}
+            >
               {bookingStepsArray.map((item) => (
-                <div key={item.id} className={styles.steps__item}>
+                <motion.div
+                  variants={leftAnimation}
+                  key={item.id}
+                  className={styles.steps__item}
+                >
                   <span>{item.icon}</span>
                   <div className={styles.item_content}>
                     <h5>{item.title}</h5>
@@ -155,10 +195,15 @@ const Home = () => {
                       Facilis, cumque?
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-            <div className={styles.booking__choose}>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 200 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className={styles.booking__choose}
+            >
               <div className={styles.choose__img}>
                 <img src={ItalyImg} alt="Italy" />
               </div>
@@ -203,7 +248,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

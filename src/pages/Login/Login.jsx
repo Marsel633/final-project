@@ -21,7 +21,6 @@ const Login = () => {
     if(localStorage.getItem("token")){
       navigate("/profile")
     }
-    console.log(localStorage.getItem("token"))
   }, [userInfo.data])
 
   return (

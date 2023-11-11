@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Form, Title } from "../../components";
 import { Button, Input } from "../../shared";
 import { AiOutlineUser, AiOutlineMail, AiFillLock } from "react-icons/ai";
-import {MdAddAPhoto} from "react-icons/md"
 import { useNavigate } from "react-router-dom";
 import styles from "./SignUp.module.scss"
 import { FormProvider, useForm } from "react-hook-form";
@@ -20,11 +19,11 @@ const SignUp = () => {
     reset();
   };
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     navigate("/profile");
-  //   }
-  // }, [user.data]);  
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/profile");
+    }
+  }, [user.data]);  
 
   return (
     <Form>
@@ -45,13 +44,6 @@ const SignUp = () => {
             title="email"
             icon={AiOutlineMail}
           />
-          {/* <Input
-            type="file"
-            registerName="photo"
-            autocomplete="off"
-            title="Add Photo"
-            icon={MdAddAPhoto}
-          /> */}
           <Input
             type="password"
             registerName="password"
