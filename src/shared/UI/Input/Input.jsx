@@ -1,38 +1,51 @@
-import React, { useState } from 'react'
-import styles from "./Input.module.scss"
-import { useForm } from "react-hook-form";
-import { AiFillEyeInvisible,
-  AiFillEye,} from "react-icons/ai"
+import React, { useState } from "react";
+import styles from "./Input.module.scss";
+import { useFormContext } from "react-hook-form";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
-const Input = ({type, autocomplete, title, icon:Icon, children}) => {
+const Input = ({
+  autocomplete,
+  title,
+  icon: Icon,
+  registerName,
+  type,
+  children,
+}) => {
   const [eye, setEye] = useState(false);
-  const {register} = useForm();
+  const { register } = useFormContext();
+  const toggleEye = () => {
+    setEye(!eye);
+    type="text"
+  }
   return (
     <div className={styles.inputBox}>
-    <input
-      className={styles.input}
-      type={type}
-      autoComplete={autocomplete}
-      required="required"
-      {...register(`${type}`, { required: true })}
-    />
-    {Icon && <Icon className={styles.inputSvg} />}
-    <span className={styles.inputSpan}>{title}</span>
-    {type === "password" ? (
-  <div className={styles.eye}>
-    {eye ? (
-      <AiFillEye className={styles.inputSvg} onClick={() => setEye(!eye)} />
-    ) : (
-      <AiFillEyeInvisible
-        className={styles.inputSvg}
-        onClick={() => setEye(!eye)}
+      <input
+        className={styles.input}
+        type={type}
+        autoComplete={autocomplete}
+        required="required"
+        {...register(`${registerName}`, { required: true })}
       />
-    )}
-  </div>
-) : null}
-    {children}
-  </div>
-  )
-}
+      {Icon && <Icon className={styles.inputSvg} />}
+      <span className={styles.inputSpan}>{title}</span>
+      {type === "password" && (
+        <div className={styles.eye}>
+          {eye ? (
+            <AiFillEye
+              className={styles.inputSvg}
+              onClick={() => setEye(!eye)}
+            />
+          ) : (
+            <AiFillEyeInvisible
+              className={styles.inputSvg}
+              onClick={() => setEye(!eye)}
+            />
+          )}
+        </div>
+      )}
+      {children}
+    </div>
+  );
+};
 
 export default Input;

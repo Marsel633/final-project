@@ -1,16 +1,18 @@
 .button {
     padding: 10px 10px;
-    font-size: 22px;
+    font-size: 18px;
     width: 100%;
     display: flex;
     gap: 14px;
     background-color: #fff;
     border-radius: 5px;
     transition: .4s all;
-    &:hover {
-        background-color: #06D6A0;
-    }
-    &:focus {
-        background-color: #06D6A0;
+    margin-bottom: 10px;
+    &:hover, &:focus {
+        background-color: #d94948;
+        color: #fff;
+        svg {
+            color: #fff;
+        }
     }
 }

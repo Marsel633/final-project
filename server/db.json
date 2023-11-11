@@ -1,5 +1,79 @@
 {
-    "users": [
-        
-    ]
+  "users": [
+    {
+      "email": "marsel@gmail.com",
+      "password": "$2a$10$22vYmn8.4ccwTmqBi.mkTOhBT0vAE4c5s054hXm872gO17ZjyC.iK",
+      "name": "Marsel",
+      "id": 1
+    },
+    {
+      "email": "marsel@mail.ru",
+      "password": "$2a$10$mhtdmxEMkpIYQaxN2wmCEur8rvmtdb56PR1Jj3/tvg/PPkrgll3lO",
+      "name": "marsel",
+      "photo": {
+        "0": {}
+      },
+      "id": 2
+    }
+  ],
+  "packages": [
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3625108/pexels-photo-3625108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "time": "3 Days / 2 Nights",
+      "price": 500,
+      "desc": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae atque molestias exercitationem harum animi autem odio consequuntur at reiciendis veniam.",
+      "location": "Japan"
+    }
+  ],
+  "feedbacks": [
+    {
+      "name": "Marsel",
+      "email": "marsel@mail.ru",
+      "location": "New Zeland",
+      "message": "Thank you guys, that was awesome",
+      "id": 1
+    }
+  ]
 }

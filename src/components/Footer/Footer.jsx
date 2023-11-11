@@ -23,7 +23,7 @@ const Footer = () => {
         <nav className={styles.footer__navbar}>
           <Link className={styles.link} to="/services">Services</Link>
           <Link className={styles.link} to="/contacts">Contacts</Link>
-          <Link className={styles.link} to="/more">More</Link>
+          <Link className={styles.link} to="/about">About</Link>
         </nav>
         <div className={styles.footer__social}>
           {socialIcons.map((item) => (

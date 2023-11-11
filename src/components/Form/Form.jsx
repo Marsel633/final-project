@@ -1,20 +1,18 @@
 import React from "react";
 import styles from "./Form.module.scss";
 import { Button } from "../../shared";
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { EarthAnimation, StarsAnimation } from "..";
 
-
-
-const Form = ({ children, submitFunc, btnTitle }) => {
-  const { handleSubmit } = useForm();
+const Form = ({ children }) => {
+  const form = useForm();
+  const { handleSubmit } = form;
   return (
     <div className={styles.login}>
       <div className={styles.login__form}>
-        <form className={styles.form} onSubmit={handleSubmit({ submitFunc })}>
+        <FormProvider {...form}>
           {children}
-          <Button type="submit">{btnTitle}</Button>
-        </form>
+        </FormProvider>
       </div>
       <EarthAnimation />
       <StarsAnimation />

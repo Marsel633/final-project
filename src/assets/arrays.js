@@ -12,6 +12,8 @@ import {
   AiFillGoogleCircle,
   AiFillYoutube,
 } from "react-icons/ai";
+import {FaPeoplePulling, FaPersonArrowUpFromLine} from "react-icons/fa6"
+import {TbMap2} from "react-icons/tb"
 
 export const cardsArray = [
   {
@@ -611,4 +613,41 @@ export const contactIconsArray = [
   <AiFillInstagram/>,
   <AiOutlineTwitter/>,
   <AiFillYoutube/>
+]
+
+export const scheduleItemsArray = [
+  {
+    image: "https://images.pexels.com/photos/2406395/pexels-photo-2406395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Aling Waterfall",
+    date: "01 - 04 July 2023",
+  },
+  {
+    image: "https://images.pexels.com/photos/533881/pexels-photo-533881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Yosemite",
+    date: "15 - 18 August 2023",
+  },
+  {
+    image: "https://images.pexels.com/photos/3892273/pexels-photo-3892273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Pragser Wildsee",
+    date: "26 - 30 December 2023",
+  },
+]
+
+export const profileItemsArray = [
+  {
+    title: "Monthly Activity",
+    completed: 37,
+    percent: "%",
+    icon: <FaPersonArrowUpFromLine/>,
+  },
+  {
+    title: "Places Visited",
+    completed: 6,
+    icon: <TbMap2/>,
+  },
+  {
+    title: "Invited People",
+    completed: 52,
+    icon: <FaPeoplePulling/>,
+  },
 ]

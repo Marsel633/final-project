@@ -1,0 +1,14 @@
+.section {
+    padding-top: 3%;
+    .calendar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        .calendar__image {
+            width: 70px;
+            background-color: transparent;
+        }
+    }
+}
