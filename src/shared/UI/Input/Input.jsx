@@ -13,10 +13,7 @@ const Input = ({
 }) => {
   const [eye, setEye] = useState(false);
   const { register } = useFormContext();
-  const toggleEye = () => {
-    setEye(!eye);
-    type="text"
-  }
+  
   return (
     <div className={styles.inputBox}>
       <input

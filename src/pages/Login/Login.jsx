@@ -24,7 +24,7 @@ const Login = () => {
   }, [userInfo.data])
 
   return (
-    <Form>
+    <Form formType="login">
       <FormProvider {...form}>
         <form className={`${styles.form} form`} onSubmit={handleSubmit(onSubmit)}>
           <Title text="Login" padding={40} />

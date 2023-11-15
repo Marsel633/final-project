@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Feedback.module.scss";
 import { Loader, ProfileLayout, Title } from "../../components";
 import { useForm } from "react-hook-form";
-import { addFeedbackStore } from "../../store";
+import { addFeedbackStore, getFeedbackStore } from "../../store";
+
 
 
 const Feedback = () => {
@@ -44,6 +45,8 @@ const Feedback = () => {
               autocomplete="off"
               {...register("location", { required: true })}
             />
+            <input type="file" 
+            {...register("image", {required: true})}/>
             <textarea
               className="input"
               placeholder="Message"

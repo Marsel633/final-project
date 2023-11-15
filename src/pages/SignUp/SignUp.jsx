@@ -26,7 +26,7 @@ const SignUp = () => {
   }, [user.data]);  
 
   return (
-    <Form>
+    <Form formType="sign up">
       <FormProvider {...form}>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           <Title text="Sign Up" padding={30} />

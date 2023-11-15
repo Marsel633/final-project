@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Layout } from "../../shared";
 import {
+  Loader,
   Title,
   bottomAnimation,
   leftAnimation,
-  rigthAnimation,
   topAnimation,
 } from "../../components";
 import {
@@ -27,6 +27,8 @@ import seoulImg from "../../assets/seoul.jpg";
 import worldMap from "../../assets/world_map.png";
 import styled from "styled-components";
 import styles from "./Home.module.scss";
+import { getFeedbackStore } from "../../store";
+import { observer } from "mobx-react-lite";
 
 const CarouselWrapper = styled(Carousel)`
   > .slick-dots li button {
@@ -41,26 +43,30 @@ const CarouselWrapper = styled(Carousel)`
   }
 `;
 
-const CarouselFunc = () => {
+const CarouselFunc = observer(() => {
+  const { getFeedback, feedback } = getFeedbackStore;
+  useEffect(() => {
+    getFeedback();
+    console.log(feedback.data);
+  }, []);
+
   return (
     <CarouselWrapper dotPosition="left">
       {carouselImages.map((item) => (
-        <div className={styles.carousel}>
+        <div className={styles.carousel} key={item.id}>
           <div className={styles.carousel__image}>
-            <img key={item.id} src={item.image} alt={item.name} />
+            <img src={item.image} alt={item.name} />
           </div>
           <div className={styles.feedback__item}>
             <div>
               <img src={item.image} alt="" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus facilis inventore consequatur recusandae voluptates.
-              Voluptate fugit incidunt nemo similique. Suscipit, ipsum fugit aut
-              impedit voluptate sequi illo illum aspernatur dignissimos numquam
-              optio voluptas, molestias quibusdam ex hic? Itaque veniam ratione
-              tempore doloribus earum quas placeat, perferendis deleniti ipsum
-              sint culpa.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              nisi rem sapiente illum ab deserunt ipsum, doloribus accusamus
+              consequatur non, voluptatem, in aliquam? Consequatur voluptatum
+              ipsam maiores vitae eligendi quia, voluptatem soluta vel?
+              Assumenda quaerat suscipit ducimus eius, beatae culpa!
             </p>
             <span>— John Doe</span>
           </div>
@@ -68,11 +74,10 @@ const CarouselFunc = () => {
       ))}
     </CarouselWrapper>
   );
-};
+});
 
-const Home = () => {
+const Home = observer(() => {
   const formatter = (value) => <CountUp end={value} separator="," />;
-
   return (
     <Layout>
       <section className={`background ${styles.home}`}>
@@ -149,26 +154,18 @@ const Home = () => {
               />
             ))}
           </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            className={styles.destionations__locations}
-          >
+          <div className={styles.destionations__locations}>
             {locationsArray.map((item) => (
-              <motion.div
-                variants={rigthAnimation}
-                key={item.id}
-                className={styles.locations__item}
-              >
+              <div key={item.id} className={styles.locations__item}>
                 <div>
                   <img src={item.image} alt={item.title} />
                 </div>
                 <h5>{item.title}</h5>
                 <p>{item.desc}</p>
                 <AiOutlineArrowRight />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
       <section className={`section background ${styles.booking}`}>
@@ -198,12 +195,7 @@ const Home = () => {
                 </motion.div>
               ))}
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className={styles.booking__choose}
-            >
+            <div className={styles.booking__choose}>
               <div className={styles.choose__img}>
                 <img src={ItalyImg} alt="Italy" />
               </div>
@@ -248,7 +240,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -260,6 +252,6 @@ const Home = () => {
       </section>
     </Layout>
   );
-};
+});
 
 export default Home;

@@ -14,6 +14,13 @@ import {
 } from "react-icons/ai";
 import {FaPeoplePulling, FaPersonArrowUpFromLine} from "react-icons/fa6"
 import {TbMap2} from "react-icons/tb"
+import { PiContactlessPayment, PiNotebookLight } from "react-icons/pi";
+import {FiSettings} from "react-icons/fi"
+import {VscFeedback} from "react-icons/vsc"
+import {MdOutlineLocalOffer} from "react-icons/md"
+import {BsTicketPerforated } from "react-icons/bs"
+import {LuLayoutDashboard} from "react-icons/lu"
+
 
 export const cardsArray = [
   {
@@ -613,6 +620,44 @@ export const contactIconsArray = [
   <AiFillInstagram/>,
   <AiOutlineTwitter/>,
   <AiFillYoutube/>
+]
+
+export const dashboardButtons = [
+  {
+    title: "Dashboard",
+    icon: <LuLayoutDashboard/>,
+    link: "profile",
+  },
+  {
+    title: "Tickets",
+    icon: <BsTicketPerforated/>,
+    link: "mytickets",
+  },
+  {
+    title: "Packages",
+    icon: <MdOutlineLocalOffer/>,
+    link: "packages",
+  },
+  {
+    title: "Notebook",
+    icon: <PiNotebookLight/>,
+    link: "diary",
+  },
+  {
+    title: "Transactions",
+    icon: <PiContactlessPayment/>,
+    link: "transactions",
+  },
+  {
+    title: "Feedback",
+    icon: <VscFeedback/>,
+    link: "feedback",
+  },
+  {
+    title: "Settings",
+    icon:  <FiSettings/>,
+    link: "settings",
+  },
 ]
 
 export const scheduleItemsArray = [
